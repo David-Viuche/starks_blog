@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+$Colores-elegidos-2-1-hex: #012B25;
+$Colores-elegidos-2-2-hex: #013C34;
+$Colores-elegidos-2-3-hex: #A3835F;
+$Colores-elegidos-2-4-hex: #D8D1CA;
+$Colores-elegidos-2-5-hex: #101010;
+
+/* Color Theme Swatches in RGBA */
+$Colores-elegidos-2-1-rgba: rgba(1,43,37, 1);
+$Colores-elegidos-2-2-rgba: rgba(1,60,52, 1);
+$Colores-elegidos-2-3-rgba: rgba(163,131,95, 1);
+$Colores-elegidos-2-4-rgba: rgba(216,209,202, 1);
+$Colores-elegidos-2-5-rgba: rgba(16,16,16, 1);
+
+/* Color Theme Swatches in HSLA */
+$Colores-elegidos-2-1-hsla: hsla(171, 95, 8, 1);
+$Colores-elegidos-2-2-hsla: hsla(171, 96, 11, 1);
+$Colores-elegidos-2-3-hsla: hsla(31, 26, 50, 1);
+$Colores-elegidos-2-4-hsla: hsla(30, 15, 81, 1);
+$Colores-elegidos-2-5-hsla: hsla(0, 0, 6, 1);
