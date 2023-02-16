@@ -11,6 +11,5 @@ import react from '@astrojs/react'
 // https://astro.build/config
 export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind(), react()],
-  site: 'https://david-viuche.github.io/',
-  base: '/starks_blog'
+  site: 'https://www.starks.dev/'
 })

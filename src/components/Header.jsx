@@ -16,7 +16,7 @@ export const Header = () => {
     <header className='bg-teal-700 text-lg text-white flex flex-col w-full h-auto sm:flex-row sm:justify-around sm:h-auto'>
       <div className='flex justify-between items-center p-3'>
         <h2 className='sm:-m-0'>
-          <a href='/starks_blog/' className='p-2 rounded sm:bg-teal-700w-auto'>{SITE_TITLE}</a>
+          <a href='/' className='p-2 rounded sm:bg-teal-700w-auto'>{SITE_TITLE}</a>
         </h2>
         <div onClick={handleOnclick} className='sm:hidden'>
           {/* <span className={`block relative w-6 h-0.5 mb-2 bg-white transition-transform ${(isOpen) && '  rotate-45 translate-y-2.5'}`} />
@@ -33,9 +33,9 @@ export const Header = () => {
       </div>
       <nav className={`bg-teal-700 absolute p-5 top-14 inset-x-0 transition transform origin-top-right ${(!isOpen) && 'hidden'} sm:block opacity-95 sm:relative sm:top-0`}>
         <ul className='flex flex-col justify-center items-center gap-5 text-center w-full sm:flex-row'>
-          <HeaderLink href='/starks_blog/' ariaLabel='redirección a la página principal'>Inicio</HeaderLink>
-          <HeaderLink href='/starks_blog/blog' ariaLabel='redirección a la lista de entradas del blog'>Blog</HeaderLink>
-          <HeaderLink href='/starks_blog/about' ariaLabel='redirección a la página para concocer más'>Acerca de</HeaderLink>
+          <HeaderLink href='/' ariaLabel='redirección a la página principal'>Inicio</HeaderLink>
+          <HeaderLink href='/blog' ariaLabel='redirección a la lista de entradas del blog'>Blog</HeaderLink>
+          <HeaderLink href='/about' ariaLabel='redirección a la página para concocer más'>Acerca de</HeaderLink>
           <HeaderLink href='https://github.com/david-viuche' target='_blank' ariaLabel='redirección al perfil de github'><AiOutlineGithub className='h-8 w-8' /></HeaderLink>
         </ul>
       </nav>
