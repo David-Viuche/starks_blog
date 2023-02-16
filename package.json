@@ -1,5 +1,5 @@
 {
-  "name": "@starks/blog",
+  "name": "starks_blog",
   "type": "module",
   "version": "0.0.1",
   "private": true,

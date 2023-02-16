@@ -2,8 +2,8 @@
 import { useState } from 'react'
 import { SITE_TITLE } from '../consts'
 import { HeaderLink } from './HeaderLink'
-import { AiOutlineCloseSquare, AiOutlineGithub } from 'react-icons/ai'
-import { TfiMenuAlt } from 'react-icons/tfi'
+import { AiOutlineCloseSquare, AiOutlineGithub } from 'react-icons/ai/index.js'
+import { TfiMenuAlt } from 'react-icons/tfi/index.js'
 
 export const Header = () => {
   const [isOpen, setisOpen] = useState(false)
@@ -16,7 +16,7 @@ export const Header = () => {
     <header className='bg-teal-700 text-lg text-white flex flex-col w-full h-auto sm:flex-row sm:justify-around sm:h-auto'>
       <div className='flex justify-between items-center p-3'>
         <h2 className='sm:-m-0'>
-          <a href='/' className='p-2 rounded sm:bg-teal-700w-auto'>{SITE_TITLE}</a>
+          <a href='/starks_blog/' className='p-2 rounded sm:bg-teal-700w-auto'>{SITE_TITLE}</a>
         </h2>
         <div onClick={handleOnclick} className='sm:hidden'>
           {/* <span className={`block relative w-6 h-0.5 mb-2 bg-white transition-transform ${(isOpen) && '  rotate-45 translate-y-2.5'}`} />
@@ -33,9 +33,9 @@ export const Header = () => {
       </div>
       <nav className={`bg-teal-700 absolute p-5 top-14 inset-x-0 transition transform origin-top-right ${(!isOpen) && 'hidden'} sm:block opacity-95 sm:relative sm:top-0`}>
         <ul className='flex flex-col justify-center items-center gap-5 text-center w-full sm:flex-row'>
-          <HeaderLink href='/'>Inicio</HeaderLink>
-          <HeaderLink href='/blog'>Blog</HeaderLink>
-          <HeaderLink href='/about'>Acerca de</HeaderLink>
+          <HeaderLink href='/starks_blog/'>Inicio</HeaderLink>
+          <HeaderLink href='/starks_blog/blog'>Blog</HeaderLink>
+          <HeaderLink href='/starks_blog/about'>Acerca de</HeaderLink>
           <HeaderLink href='https://github.com/david-viuche' target='_blank'><AiOutlineGithub className='h-8 w-8' /></HeaderLink>
         </ul>
       </nav>
