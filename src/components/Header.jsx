@@ -33,10 +33,10 @@ export const Header = () => {
       </div>
       <nav className={`bg-teal-700 absolute p-5 top-14 inset-x-0 transition transform origin-top-right ${(!isOpen) && 'hidden'} sm:block opacity-95 sm:relative sm:top-0`}>
         <ul className='flex flex-col justify-center items-center gap-5 text-center w-full sm:flex-row'>
-          <HeaderLink href='/starks_blog/'>Inicio</HeaderLink>
-          <HeaderLink href='/starks_blog/blog'>Blog</HeaderLink>
-          <HeaderLink href='/starks_blog/about'>Acerca de</HeaderLink>
-          <HeaderLink href='https://github.com/david-viuche' target='_blank'><AiOutlineGithub className='h-8 w-8' /></HeaderLink>
+          <HeaderLink href='/starks_blog/' ariaLabel='redirección a la página principal'>Inicio</HeaderLink>
+          <HeaderLink href='/starks_blog/blog' ariaLabel='redirección a la lista de entradas del blog'>Blog</HeaderLink>
+          <HeaderLink href='/starks_blog/about' ariaLabel='redirección a la página para concocer más'>Acerca de</HeaderLink>
+          <HeaderLink href='https://github.com/david-viuche' target='_blank' ariaLabel='redirección al perfil de github'><AiOutlineGithub className='h-8 w-8' /></HeaderLink>
         </ul>
       </nav>
     </header>
