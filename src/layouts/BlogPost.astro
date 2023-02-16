@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import {Header} from '../components/Header.jsx';
 import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -24,10 +24,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</style>
 	</head>
 
-	<body>
-		<Header />
-		<main>
-			<article>
+	<body class="flex flex-col w-full h-screen justify-between font-sans bg-slate-200 ">
+		<Header client:load/>
+		<main class="flex flex-col justify-center items-center w-full sm:p-24 p-5">
+			<article class="sm:max-w-xl">
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="title">{title}</h1>
 				{pubDate && <time>{pubDate}</time>}

@@ -1,7 +1,10 @@
 ---
 const today = new Date();
+import {AiOutlineCopyrightCircle} from 'react-icons/ai'
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="flex flex-col justify-center items-center h-20 p-5 bg-teal-700 text-white">
+	<div class="flex items-center">
+	<AiOutlineCopyrightCircle /> {today.getFullYear()} StarksDev.
+	</div>
 </footer>
