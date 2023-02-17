@@ -32,7 +32,7 @@ export const Header = () => {
 
       </div>
       <nav className={`bg-teal-700 absolute p-5 top-14 inset-x-0 transition transform origin-top-right ${(!isOpen) && 'hidden'} sm:block opacity-95 sm:relative sm:top-0`}>
-        <ul className='flex flex-col justify-center items-center gap-5 text-center w-full sm:flex-row'>
+        <ul className='flex flex-col justify-center items-center gap-5 text-center w-full sm:flex-row sm:h-14'>
           <HeaderLink href='/' ariaLabel='redirección a la página principal'>Inicio</HeaderLink>
           <HeaderLink href='/blog' ariaLabel='redirección a la lista de entradas del blog'>Blog</HeaderLink>
           <HeaderLink href='/about' ariaLabel='redirección a la página para concocer más'>Acerca de</HeaderLink>
