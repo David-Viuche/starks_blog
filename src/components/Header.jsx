@@ -19,9 +19,7 @@ export const Header = () => {
           <a href='/' className='p-2 rounded sm:bg-teal-700w-auto'>{SITE_TITLE}</a>
         </h2>
         <div onClick={handleOnclick} className='sm:hidden'>
-          {/* <span className={`block relative w-6 h-0.5 mb-2 bg-white transition-transform ${(isOpen) && '  rotate-45 translate-y-2.5'}`} />
-          <span className={`block relative w-6 h-0.5 mb-2 bg-white transition-opacity ${(isOpen) && 'opacity-0'}`} />
-          <span className={`block relative w-6 h-0.5 bg-white transition-transform ${(isOpen) && ' -rotate-45  -translate-y-2.5'}`} /> */}
+
           {
              (isOpen)
                ? <AiOutlineCloseSquare className='w-8 h-8' />
