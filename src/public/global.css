@@ -1,0 +1,12 @@
+.post{
+    letter-spacing: 1px;
+}
+
+.post p {
+    margin: 2.5rem 0;
+}
+
+.post ul li{
+    list-style: outside;
+    margin-left: 4rem;
+}

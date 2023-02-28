@@ -6,50 +6,34 @@ import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageDesc } = Astro.props.frontmatter || Astro.props;
 ---
 
 <html lang="es">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 2px solid #ddd;
-				margin: 1rem 0;
-			}
-			img {
-				max-width: 300px;
-				min-width: 100px;
-			}
-			p {
-				margin: 3rem;
-				padding: 2rem;
-			}
-		</style>
 	</head>
 
 	<body class="flex flex-col w-full h-screen justify-between font-sans bg-slate-200 ">
 		<Header client:load/>
 		<main class="flex flex-col justify-center items-center w-full sm:p-24 p-5">
-			<article class="sm:max-w-xl">
+			<article class="sm:max-w-xl text-slate-500">
 				<div class="flex justify-center">
-					{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+					{heroImage && <img class="max-w-xs" width={720} height={360} src={heroImage} alt={heroImageDesc} />}
 				</div>
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
+				<h1 class="text-3xl text-center m-8">{title}</h1>
+				<small class="text-right block">Publicación {pubDate && <time>{pubDate}</time>} </small>
 				{
 					updatedDate && (
-						<div>
+						<small class="text-right block">
 							Fecha Actualización <time>{updatedDate}</time>
-						</div>
+						</small>
 					)
 				}
 				<hr />
-				<slot />
+				<div class="post m-4 text-justify text-lg ">
+					<slot />
+				</div>
 			</article>
 		</main>
 		<Footer />
