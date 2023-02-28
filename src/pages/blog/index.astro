@@ -18,19 +18,21 @@ const posts = (await getCollection('blog')).sort(
 	<body class="flex flex-col w-full h-screen content-center justify-between font-sans bg-slate-200 ">
 		<Header client:load/>
 		<main class="flex flex-col justify-center items-center">
-			<section>
-				<ul>
+			<section class="h-full w-full flex justify-center items-center flex-col gap-4">
+				<ul class="flex flex-wrap max-w-6xl justify-center gap-6">
 					{
 						posts.map((post) => (
-							<li>
-								<time datetime={new Date(post.data.pubDate).toISOString()}>
-									{new Date(post.data.pubDate).toLocaleDateString('en-us', {
-										year: 'numeric',
-										month: 'short',
-										day: 'numeric',
-									})}
-								</time>
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+							<li class="m-4 max-w-xs">
+								<div class="shadow-md rounded-lg overflow-hidden flex flex-col justify-center items-center">
+									<img class="aspect-video max-w-xs" src={post.data.heroImage} alt={post.data.heroImageDes}>
+									<div class="flex justify-around p-4 border-b-2 border-slate-300 w-full">
+										<h1 class="font-semibold">{post.data.title}</h1>
+										<time datetime={new Date(post.data.pubDate).toISOString()}>
+											{new Date(post.data.pubDate).toLocaleDateString()}
+										</time>
+									</div>
+									<a href={`/blog/${post.slug}/`} class="text-center block p-2 bg-cyan-700 hover:bg-cyan-500 m-2 w-32 rounded-lg text-white">Ver más</a>
+								</div>
 							</li>
 						))
 					}
