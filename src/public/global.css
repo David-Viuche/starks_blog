@@ -10,3 +10,9 @@
     list-style: outside;
     margin-left: 4rem;
 }
+
+.post pre {
+    max-width: 80vw;
+    padding: 1rem;
+}
+
