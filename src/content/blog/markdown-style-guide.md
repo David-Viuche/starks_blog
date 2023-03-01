@@ -1,8 +1,10 @@
 ---
-title: "Markdown Style Guide"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
-pubDate: "Jul 01 2022"
-heroImage: "/placeholder-hero.jpg"
+title: "Markdown Guia de estilos"
+description: "Aquí hay una muestra de la sintaxis básica de Markdown que se puede usar al escribir contenido de Markdown en Astro."
+pubDate: "02/28/2023"
+heroImage: "/writer.svg"
+heroImageDesc: "avatar inicial de usuario"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
@@ -69,6 +71,8 @@ The blockquote element represents content that is quoted from another source, op
   </body>
 </html>
 ```
+
+
 
 ## List Types
 
