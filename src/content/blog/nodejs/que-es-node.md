@@ -1,6 +1,6 @@
 ---
 title: "Qué es Node JS"
-description: ""
+description: "Breve explicación de que es Node JS para que sirve y sus posibles usos"
 pubDate: "02/06/2023"
 heroImage: "/web_developer.svg"
 heroImageDesc: "avatar sentado en una silla programando en una laptop"
