@@ -6,8 +6,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+console.log(posts)
 ---
 
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ const posts = (await getCollection('blog')).sort(
 							<li class="m-4 max-w-xs">
 								<a href={`/blog/${post.slug}/`} class="shadow-md rounded-lg overflow-hidden flex flex-col justify-center items-center">
 									<div class="shadow-md rounded-lg overflow-hidden flex flex-col justify-center items-center">
-										<img class="aspect-video max-w-xs" src={post.data.heroImage} alt={post.data.heroImageDes}>
+										<img class="aspect-video max-w-xs" src={post.data.heroImage} alt={post.data.heroImageDesc}>
 										<div class="flex flex-col justify-around p-4 border-t-2 border-slate-300 w-full text-justify">
 											<h1 class="text-md font-semibold">{post.data.title}</h1>
 											<p class="h-16 text-sm">{post.data.description}</p>
